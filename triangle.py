@@ -1,3 +1,5 @@
+import math
+
 #This funtion takes the input for 3 sides of the triangle and returns if the triangle is valid or not by checking if any side
 #has a length equal to zero or if any two sides add up to less than or equal to the third
 def is_valid_triangle (a,b,c) -> bool:
@@ -26,8 +28,9 @@ def classify_triangle (a,b,c) -> str:
         triangle_type = "Scalene"
 
     sides = sorted([a, b, c])
-    if sides[0] ** 2 + sides[1] ** 2 == sides[2] ** 2:
+    if math.isclose(sides[0] ** 2 + sides[1] ** 2, sides[2] ** 2):
         return "right " + triangle_type 
     #Changed from return f"right {triangle_type}" to return "right " + triangle_type (more comfortable with latter)
+    #Edited to use math.isclose so noninteger values work (5,5, 5*sqrt(2))
     
     return triangle_type
