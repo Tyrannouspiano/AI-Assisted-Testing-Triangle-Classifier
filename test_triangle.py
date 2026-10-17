@@ -1,5 +1,4 @@
 from math import sqrt
-
 from triangle import classify_triangle
 
 def test_right_scalene_triangle():
