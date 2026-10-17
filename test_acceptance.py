@@ -1,15 +1,6 @@
 from math import sqrt
 from triangle import classify_triangle
 
-#We run a stained-glass studio. Customers enter three side lengths and we tell them the shape and whether it’s buildable. 
-#If it’s not a valid triangle, show a message, don’t crash. 
-#Also flag right-angle pieces — they need reinforced corners. It has to be correct every time; a wrong answer means a ruined pane.
-
-#Rewritten as 2-3 testable acceptance criteria
-#1. A customer should be able to enter 3 numbers and it should return if those numbers create a valid triangle 
-#or return invalid if the customer enters any numbers less than or equal to zero or if the given numbers do not create a valid triangle
-#2. The program should use the pythagoreon theorem to test if the triangle is a right triange. If it is, the triangle should be marked
-#as a right triangle so it is known that the corner needs to be reinforced.
 
 def test_acceptance():
     assert classify_triangle(3, 3, 3) == "Equilateral"
